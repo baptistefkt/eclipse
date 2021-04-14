@@ -14,16 +14,17 @@ export const StyledVisibleXS = styled.div`
 
 export const StyledButton = styled.button`
     height: 40px;
-    border: 2px solid #a7a3ff;
+    min-width: 100px;
+    border: 2px solid #ecc56a;
     border-radius: 6px;
-    background: #7872ff;
+    background: #bd886a;
     color: white;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 12px;
     padding-left: 16px;
     padding-right: 20px;
-    box-shadow: 10px 10px 20px 0px #0b0d23;
+    box-shadow: 10px 10px 20px 0px rgba(35, 11, 11, 0.8);
     transition-duration: 0.2s;
     cursor: pointer;
 `

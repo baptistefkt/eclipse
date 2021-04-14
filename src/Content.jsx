@@ -7,6 +7,7 @@ import { StyledButton } from './commonStyled'
 import safe from './safe.png'
 import hold from './hold.png'
 import profit from './profit.png'
+import logo from './LunarEclipseDark.png'
 
 const StyledContentContainer = styled.div`
   margin-left: 200px;
@@ -15,15 +16,20 @@ const StyledContentContainer = styled.div`
 const StyledGrid = styled.div`
   margin-top: 60px;
   padding: 20px;
-  background-color: #0d102c;
+  background-color: #1e0909;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 20px;
 
+  @media (max-width: 899px) {
+    display: flex;
+    flex-direction: column;
+  }
+
   > div, article {
-    background: linear-gradient(142deg, #212440, #292e634a);
+    background: linear-gradient(142deg, #2a1617, #292e634a);
     border-radius: 8px;
   }
 `
@@ -43,8 +49,8 @@ const StyledArticle = styled.article`
     line-height: 1.2;
 
     small {
-      color: #8270c4;
-      text-shadow: 0px 0px 6px #4e4693;
+      color: #c47b70;
+      text-shadow: 0px 0px 6px #934646;
       font-size: 12px;
       font-weight: 400;
       padding-left: 10px;
@@ -53,7 +59,7 @@ const StyledArticle = styled.article`
   }
 
   p {
-    color: #838dd6;
+    color: #bf7979;
     font-size: 14px;
     margin-top: 30px;
   }
@@ -66,15 +72,15 @@ const StyledArticle = styled.article`
   }
 
   .flex {
-    margin-bottom: 16px;
+    margin-bottom: 13px;
   }
 
   .iconContainer {
     width: 22px;
     height: 22px;
     border-radius: 5px;
-    background: #7872ff;
-    border: 2px solid #a7a3ff;
+    background: #bd886a;
+    border: 2px solid #ecc56a;
     text-align: center;
     float: left;
     font-size: 12px;
@@ -88,13 +94,13 @@ const StyledArticle = styled.article`
     font-weight: 600;
   }
   .right {
-    color: #9b82fb;
+    color: #f9c28c;
     font-size: 12px;
   }
 
   .bolder {
     font-weight: 700;
-    color: #838dd6;
+    color: #bf7979;
     display: block;
   }
 `
@@ -107,18 +113,26 @@ const StyledBigArticle = styled(StyledArticle)`
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
+    @media (max-width: 899px) {
+      flex-direction: column;
+    }
   }
 
   .items {
     padding: 20px;
     text-align: center;
     background-color: transparent;
-    background-image: linear-gradient(142deg, #212440, #292e634a);
+    background-image: linear-gradient(142deg, #351b1d, #351b1d4a);
     border-radius: 10px;
     margin: 0 15px;
     flex: 1;
     min-height: 370px;
     height: 100%;
+
+    @media (max-width: 899px) {
+      min-height: unset;
+    }
   }
 
   .one {
@@ -197,7 +211,7 @@ const StyledRoadMap = styled(StyledArticle)`
 `
 
 const StyledFooter = styled.footer`
-  background-image: linear-gradient(142deg, #0b0d1f, #0000009e);
+  background-image: linear-gradient(142deg, #1f0b0b, #0000009e);
   height: 100px; 
   margin-top: -60px;
   display: flex;
@@ -205,6 +219,11 @@ const StyledFooter = styled.footer`
   align-items: center;
   color: #272b4e;
   font-size: 25px;
+
+  img {
+    width: 200px;
+    opacity: 0.5;
+  }
 `
 
 export function Content() {
@@ -399,7 +418,7 @@ export function Content() {
           </div>
         </StyledRoadMap>
       </StyledGrid>
-      <StyledFooter>ECLIPSE</StyledFooter>
+      <StyledFooter><img src={logo} alt="lunar-eclipse-logo"/></StyledFooter>
     </StyledContentContainer>
   )
 }

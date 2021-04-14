@@ -6,8 +6,12 @@ import hero from './hero.jpg'
 
 const params = {
   "particles": {
+      "links": {
+        "enable": true,
+        "opacity": 0.1,
+      },
       "number": {
-          "value": 70,
+          "value": 120,
           "density": {
               "enable": false
           }
@@ -18,8 +22,8 @@ const params = {
       },
       "move": {
           "enable": true,
-          "speed": 3,
-          "direction": "top",
+          "speed": 1,
+          "direction": "none",
           "out_mode": "out",
           "random": true,
           "straight": false,
@@ -43,7 +47,7 @@ const StyledHero = styled.header`
   height: auto;
   min-height: 320px;
   border-radius: 8px;
-  background-image: linear-gradient(141deg, rgb(176 114 255 / 57%), #3f4894), url(${hero});
+  background-image: linear-gradient(141deg, rgb(158 144 144 / 22%), #943f3f), url(${hero});
   background-size: cover;
   background-position: center top;
   margin-bottom: 30px;

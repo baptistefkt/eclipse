@@ -10,7 +10,7 @@ const StyledMenuContainer = styled.div`
   position: fixed;
   top: 60px;
   width: 200px;
-  background: linear-gradient(142deg, #212440, #0000001f);
+  background: linear-gradient(142deg, #2a1617, #0000001f);
   left: 0;
   height: calc(100vh - 60px);
   min-height: 740px;
@@ -88,13 +88,19 @@ const StyledButton = styled.button`
   height: 50px;
   float: left;
   margin-top: 15px;
-  background: #272b4e;
+  background: #4e2727;
   border-radius: 5px;
-  border: 2px solid #4b5080;
+  border: 2px solid #804b4b;
   box-shadow: 10px 10px 20px 0px #0b0d23;
   transition-duration: 0.2s;
   position: relative;
   cursor: pointer;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 10px 20px 20px 0px #0b0d23;
+    transition-duration: 0.2s;
+  }
 `
 
 export function Menu() {

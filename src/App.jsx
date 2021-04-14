@@ -6,7 +6,7 @@ import { Content } from './Content'
 import './App.css';
 
 const StyledAppContainer = styled.div`
-  background-color: #0d102c;
+  background-color: #211204;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 `
