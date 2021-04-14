@@ -54,7 +54,7 @@ const StyledHero = styled.header`
   margin-bottom: 30px;
   display: flex;
   align-items: center;
-  box-shadow: 10px 10px 20px 0px #0b0d23;
+  box-shadow: 10px 20px 20px 0px rgba(35, 11, 11, 1);
 
   grid-column: 1 / 4;
   grid-row: 1;

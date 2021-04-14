@@ -105,14 +105,15 @@ const StyledButton = styled.button`
   background: #4e2727;
   border-radius: 5px;
   border: 2px solid #804b4b;
-  box-shadow: 10px 10px 20px 0px #0b0d23;
+  box-shadow: 10px 20px 20px 0px rgba(35, 11, 11, 0.8);
+
   transition-duration: 0.2s;
   position: relative;
   cursor: pointer;
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 10px 20px 20px 0px #0b0d23;
+    box-shadow: 10px 20px 20px 0px rgba(35, 11, 11, 1);
     transition-duration: 0.2s;
   }
 `
