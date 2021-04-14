@@ -23,7 +23,7 @@ const StyledLoaderContainer = styled.div`
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: #0d102c;
+    background-color: #200808;
   }
 `
 
