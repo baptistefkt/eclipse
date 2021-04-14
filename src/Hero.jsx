@@ -5,14 +5,14 @@ import { StyledNotVisibleXS } from './commonStyled'
 import hero from './hero.jpg'
 
 
-const params = {
+const params = (isMobile) => ({
   "particles": {
       "links": {
         "enable": true,
         "opacity": 0.1,
       },
       "number": {
-          "value": 120,
+          "value": isMobile ? 30 : 120,
           "density": {
               "enable": false
           }
@@ -41,7 +41,7 @@ const params = {
           }
       },
   }
-}
+})
 
 const StyledHero = styled.header`
   width: 100%;
@@ -91,6 +91,7 @@ const StyledParticleCont = styled.span`
 `
 
 export function Hero() {
+  const isMobile = window.screen.width < 900;
   return (
     <>
       <StyledHero>
@@ -101,7 +102,7 @@ export function Hero() {
           </StyledNotVisibleXS>
         </h1>
         <StyledParticleCont>
-          <Particles params={params} />
+          <Particles params={params(isMobile)} />
         </StyledParticleCont>
       </StyledHero>
       

@@ -240,7 +240,7 @@ export function Content() {
         <Hero />
         <StyledArticle>
           <h4>
-            About Eclipse
+            About Lunar Eclipse
             <small>Brief description</small>
           </h4>
           <p>We are tired of all the scams that happen among tokens. So we decided to take matters into our own hands. That's why we created ECLIPSE, with the intention of being 100% safe from rug pulls. How? Because we, the devs have no rugs to pull. This token is for you, let's moon.</p>

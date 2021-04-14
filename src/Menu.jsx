@@ -118,7 +118,6 @@ const StyledButton = styled.button`
 `
 
 export function Menu({ menuOpen }) {
-  console.log(menuOpen)
   return (
     <StyledMenuContainer menuOpen={menuOpen}>
       <StyledMenuBlock>
