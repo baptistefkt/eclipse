@@ -47,18 +47,20 @@ const StyledMenuButton = styled(StyledButton)`
 `
 
 
-export function Header() {
+export function Header({ onclick }) {
   return (
     <StyledHeaderContainer>
       <img className="logo" src={logo} alt="lunar-eclipse-logo" />
       <StyledNotVisibleXS>
-        <StyledPancakeButton>
-          <img src={pancakeSvg} alt="Pancakeswap" />
-          BUY ON PANCAKESWAP
-        </StyledPancakeButton>
+        <a href="#">
+          <StyledPancakeButton>
+            <img src={pancakeSvg} alt="Pancakeswap" />
+            BUY ON PANCAKESWAP
+          </StyledPancakeButton>
+        </a>
       </StyledNotVisibleXS>
       <StyledVisibleXS>
-        <StyledMenuButton>Menu</StyledMenuButton>
+        <StyledMenuButton onClick={onclick}>Menu</StyledMenuButton>
       </StyledVisibleXS>
     </StyledHeaderContainer>
   )

@@ -22,6 +22,16 @@ const StyledMenuContainer = styled.div`
     color: #d6dbff;
     font-size: 10px;
   }
+
+  @media (max-width: 899px) {
+    width: 100%;
+    left: ${(props) => props.menuOpen ? '0' : '-100vw'};
+    transition-duration: 0.4s;
+    z-index: 3;
+    background: linear-gradient(142deg, #402121, #26100a);
+    padding: 30px;
+    min-height: unset;
+  }
 `
 
 const StyledMenuBlock = styled.div`
@@ -33,7 +43,7 @@ const StyledMenuBlock = styled.div`
 const StyledMenuTitle = styled.div`
   font-size: 12px;
   font-weight: 600;
-  color: #7a7fa9;
+  color: #a97a7a;
   margin-top: 20px;
   height: 20px;
 `
@@ -79,6 +89,10 @@ const StyledButtonsCont = styled.div`
   left: 0px;
   padding: 15px;
   padding-bottom: 146px;
+
+  @media (max-width: 899px) {
+    padding-bottom: 30px;
+  }
 `
 const StyledButton = styled.button`
   display: flex;
@@ -103,9 +117,10 @@ const StyledButton = styled.button`
   }
 `
 
-export function Menu() {
+export function Menu({ menuOpen }) {
+  console.log(menuOpen)
   return (
-    <StyledMenuContainer>
+    <StyledMenuContainer menuOpen={menuOpen}>
       <StyledMenuBlock>
         <StyledMenuTitle className="top">Website navigation</StyledMenuTitle>
         <StyledMenuItems>
@@ -176,9 +191,11 @@ export function Menu() {
         </StyledMenuItems>
       </StyledMenuBlock>
       <StyledButtonsCont>
-        <StyledButton>
-          <img src={bscscan} alt="bscscan-logo"/>
-        </StyledButton>
+        <a href="#">
+          <StyledButton>
+            <img src={bscscan} alt="bscscan-logo"/>
+          </StyledButton>
+        </a>
       </StyledButtonsCont>
     </StyledMenuContainer>
   )

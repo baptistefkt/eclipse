@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Particles from 'react-particles-js'
+import { StyledNotVisibleXS } from './commonStyled'
 import hero from './hero.jpg'
 
 
@@ -70,6 +71,9 @@ const StyledHero = styled.header`
     font-weight: 800;
     letter-spacing: -3px;
     line-height: 40px;
+    @media (max-width: 1024px) {
+      line-height: 65px;
+    }
     span {
       display: block;
       font-size: 25px;
@@ -83,7 +87,7 @@ const StyledHero = styled.header`
 const StyledParticleCont = styled.span`
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
 `
 
 export function Hero() {
@@ -91,7 +95,10 @@ export function Hero() {
     <>
       <StyledHero>
         <h1>
-          Welcome to Eclipse. <span>Truly a safe token, let's moon.</span>
+          Welcome to Lunar Eclipse.
+          <StyledNotVisibleXS>
+            <span>Truly a safe token, let's moon.</span>
+          </StyledNotVisibleXS>
         </h1>
         <StyledParticleCont>
           <Particles params={params} />

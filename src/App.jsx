@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import { Header } from './Header'
 import { Menu } from './Menu'
@@ -18,11 +18,13 @@ const GlobalStyle = createGlobalStyle`
 `
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <StyledAppContainer>
       <GlobalStyle />
-      <Header />
-      <Menu />
+      <Header onclick={() => setMenuOpen(!menuOpen)}/>
+      <Menu menuOpen={menuOpen}/>
       <Content />
     </StyledAppContainer>
   );

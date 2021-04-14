@@ -11,6 +11,11 @@ import logo from './LunarEclipseDark.png'
 
 const StyledContentContainer = styled.div`
   margin-left: 200px;
+
+  @media (max-width: 899px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `
 
 const StyledGrid = styled.div`
@@ -39,6 +44,10 @@ const StyledArticle = styled.article`
   max-height: 591px;
   border-radius: 10px;
   padding: 20px;
+
+  @media (max-width: 899px) {
+    max-height: unset;
+  }
 
   h4 {
     margin: 0;
@@ -132,15 +141,9 @@ const StyledBigArticle = styled(StyledArticle)`
 
     @media (max-width: 899px) {
       min-height: unset;
+      margin: 0;
+      margin-bottom: 15px;
     }
-  }
-
-  .one {
-    margin-left: 0;
-  }
-
-  .three {
-    margin-right: 0;
   }
 
   h3 {
@@ -190,8 +193,8 @@ const StyledRoadMap = styled(StyledArticle)`
   }
 
   .notComplete {
-    background: #34385f;
-    border: 2px solid #484d82;
+    background: #4f2222;
+    border: 2px solid #8e5050;
   }
 
   .text {
@@ -219,6 +222,10 @@ const StyledFooter = styled.footer`
   align-items: center;
   color: #272b4e;
   font-size: 25px;
+
+  @media (max-width: 899px) {
+    margin-top: 50px;
+  }
 
   img {
     width: 200px;
