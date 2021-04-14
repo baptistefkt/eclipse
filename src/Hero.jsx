@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Particles from 'react-particles-js'
+import hero from './hero.jpg'
 
 
 const params = {
@@ -37,8 +38,19 @@ const params = {
   }
 }
 
-const StyledHero = styled.div`
-  background-color: linear-gradient(141deg, rgb(176 114 255 / 57%), #3f4894);
+const StyledHero = styled.header`
+  width: 100%;
+  height: auto;
+  min-height: 320px;
+  border-radius: 8px;
+  background-image: linear-gradient(141deg, rgb(176 114 255 / 57%), #3f4894), url(${hero});
+  background-size: cover;
+  background-position: center top;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 10px 20px 0px #0b0d23;
+
   grid-column: 1 / 4;
   grid-row: 1;
   margin-bottom: 10px;
@@ -47,16 +59,19 @@ const StyledHero = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 320px;
   position: relative;
   overflow: hidden;
   h1 {
     font-size: 70px;
-    font-weight: 800px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    line-height: 40px;
     span {
       display: block;
       font-size: 25px;
-      font-weight: 400px;
+      font-weight: 400;
+      letter-spacing: normal;
+      margin-top: 16px;
     }
   }
 `

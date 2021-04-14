@@ -4,9 +4,15 @@ import { Hero } from './Hero'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoins, faRecycle, faFire, faMoneyBill, faUser, faCheck, faHourglass } from '@fortawesome/free-solid-svg-icons'
 import { StyledButton } from './commonStyled'
+import safe from './safe.png'
+import hold from './hold.png'
+import profit from './profit.png'
 
 const StyledContentContainer = styled.div`
   margin-left: 200px;
+`
+
+const StyledGrid = styled.div`
   margin-top: 60px;
   padding: 20px;
   background-color: #0d102c;
@@ -34,13 +40,15 @@ const StyledArticle = styled.article`
     font-size: 18px;
     font-weight: 700;
     color: white;
+    line-height: 1.2;
 
     small {
       color: #8270c4;
       text-shadow: 0px 0px 6px #4e4693;
       font-size: 12px;
       font-weight: 400;
-      padding-left: 7px;
+      padding-left: 10px;
+      letter-spacing: 1px;
     }
   }
 
@@ -109,8 +117,16 @@ const StyledBigArticle = styled(StyledArticle)`
     border-radius: 10px;
     margin: 0 15px;
     flex: 1;
-    min-height: 366px;
+    min-height: 370px;
     height: 100%;
+  }
+
+  .one {
+    margin-left: 0;
+  }
+
+  .three {
+    margin-right: 0;
   }
 
   h3 {
@@ -118,6 +134,12 @@ const StyledBigArticle = styled(StyledArticle)`
     font-weight: 600;
     margin-top: 20px;
     color: white;
+    line-height: 1.2;
+  }
+
+  img {
+    width: 65px;
+    height: 65px;
   }
 `
 
@@ -174,196 +196,210 @@ const StyledRoadMap = styled(StyledArticle)`
   }
 `
 
+const StyledFooter = styled.footer`
+  background-image: linear-gradient(142deg, #0b0d1f, #0000009e);
+  height: 100px; 
+  margin-top: -60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #272b4e;
+  font-size: 25px;
+`
+
 export function Content() {
   return (
     <StyledContentContainer>
-      <Hero />
-      <StyledArticle>
-        <h4>
-          About Eclipse
-          <small>Brief description</small>
-        </h4>
-        <p>We are tired of all the scams that happen among tokens. So we decided to take matters into our own hands. That's why we created ECLIPSE, with the intention of being 100% safe from rug pulls. How? Because we, the devs have no rugs to pull. This token is for you, let's moon.</p>
-      </StyledArticle>
-      <StyledArticle>
-        <h4>
-          Tokenomics
-          <small>Update daily</small>
-        </h4>
-        <div className="content">
-          <div className="flex">
-            <div className="left">
-              <div className="iconContainer">
-                <FontAwesomeIcon icon={faCoins} />
+      <StyledGrid>
+        <Hero />
+        <StyledArticle>
+          <h4>
+            About Eclipse
+            <small>Brief description</small>
+          </h4>
+          <p>We are tired of all the scams that happen among tokens. So we decided to take matters into our own hands. That's why we created ECLIPSE, with the intention of being 100% safe from rug pulls. How? Because we, the devs have no rugs to pull. This token is for you, let's moon.</p>
+        </StyledArticle>
+        <StyledArticle>
+          <h4>
+            Tokenomics
+            <small>Update daily</small>
+          </h4>
+          <div className="content">
+            <div className="flex">
+              <div className="left">
+                <div className="iconContainer">
+                  <FontAwesomeIcon icon={faCoins} />
+                </div>
+                <div>Max Supply</div>
               </div>
-              <div>Max Supply</div>
+              <div className="right">1,000,000,000,000,000</div>
             </div>
-            <div className="right">1,000,000,000,000,000</div>
-          </div>
-          <div className="flex">
-            <div className="left">
-              <div className="iconContainer">
-                <FontAwesomeIcon icon={faRecycle} />
+            <div className="flex">
+              <div className="left">
+                <div className="iconContainer">
+                  <FontAwesomeIcon icon={faRecycle} />
+                </div>
+                <div>Circulating</div>
               </div>
-              <div>Circulating</div>
+              <div className="right">720,093,318,120,919</div>
             </div>
-            <div className="right">720,093,318,120,919</div>
-          </div>
-          <div className="flex">
-            <div className="left">
-              <div className="iconContainer">
-                <FontAwesomeIcon icon={faFire} />
+            <div className="flex">
+              <div className="left">
+                <div className="iconContainer">
+                  <FontAwesomeIcon icon={faFire} />
+                </div>
+                <div>Burned</div>
               </div>
-              <div>Burned</div>
+              <div className="right">279,906,681,879,081</div>
             </div>
-            <div className="right">279,906,681,879,081</div>
-          </div>
-          <div className="flex">
-            <div className="left">
-              <div className="iconContainer">
-                <FontAwesomeIcon icon={faMoneyBill} />
+            <div className="flex">
+              <div className="left">
+                <div className="iconContainer">
+                  <FontAwesomeIcon icon={faMoneyBill} />
+                </div>
+                <div>Marketcap</div>
               </div>
-              <div>Marketcap</div>
+              <div className="right">$7,132,960</div>
             </div>
-            <div className="right">$7,132,960</div>
-          </div>
-          <div className="flex">
-            <div className="left">
-              <div className="iconContainer">
-                <FontAwesomeIcon icon={faUser} />
+            <div className="flex">
+              <div className="left">
+                <div className="iconContainer">
+                  <FontAwesomeIcon icon={faUser} />
+                </div>
+                <div>Holders</div>
               </div>
-              <div>Holders</div>
+              <div className="right">4,343</div>
             </div>
-            <div className="right">4,343</div>
           </div>
-        </div>
-      </StyledArticle>
-      <StyledArticle>
-        <h4>
-          Audit by solidity.finance
-          <small>100% Passed</small>
-        </h4>
-        <p>
-          <i>
-            "Eclipse is a new competitor in the meme-coin space that has gained a large community following in a short timeframe.
-            <br/><br/>
-            No security issues were identified in our analysis."
-          </i>
-          <span className="bolder">- solidity.finance</span>
-        </p>
-        <a href="#">
-          <StyledButton>
-            Read full analysis
-          </StyledButton>
-        </a>
-      </StyledArticle>
-      <StyledBigArticle>
-        <h4>
-          Points of interest
-          <small>Reasons why to own Eclipse</small>
-        </h4>
-        <div className="flexContent">
-          <div className="items">
-            <img src="" alt=""/>
-            <h3>Completely Secured</h3>
-            <p>Audited smart contract, no big devs holdings (all burnt from start), Liquidity Pool locked for 5 years!</p>
+        </StyledArticle>
+        <StyledArticle>
+          <h4>
+            Audit by solidity.finance
+            <small>100% Passed</small>
+          </h4>
+          <p>
+            <i>
+              "Eclipse is a new competitor in the meme-coin space that has gained a large community following in a short timeframe.
+              <br/><br/>
+              No security issues were identified in our analysis."
+            </i>
+            <span className="bolder">- solidity.finance</span>
+          </p>
+          <a href="#">
+            <StyledButton>
+              Read full analysis
+            </StyledButton>
+          </a>
+        </StyledArticle>
+        <StyledBigArticle>
+          <h4>
+            Points of interest
+            <small>Reasons why to own Eclipse</small>
+          </h4>
+          <div className="flexContent">
+            <div className="items one">
+              <img src={safe} alt=""/>
+              <h3>Completely Secured</h3>
+              <p>Audited smart contract, no big devs holdings (all burnt from start), Liquidity Pool locked for 5 years!</p>
+            </div>
+            <div className="items two">
+              <img src={hold} alt=""/>
+              <h3>Rewarding for Holders</h3>
+              <p>Keep holding your Eclipse tokens, and you will earn more. For each transaction, a 3% fee is sent back to our beloved holders.</p>
+            </div>
+            <div className="items three">
+              <img src={profit} alt=""/>
+              <h3>Inventive Construction</h3>
+              <p>With a combination of burning, automatic LP filling and rewarding of holders, Eclipse is set to rise!</p>
+            </div>
           </div>
-          <div className="items">
-            <img src="" alt=""/>
-            <h3>Rewarding for Holders</h3>
-            <p>Keep holding your Eclipse tokens, and you will earn more. For each transaction, a 3% fee is sent back to our beloved holders.</p>
+        </StyledBigArticle>
+        <StyledRoadMap>
+          <h4>
+            Roadmap
+            <small>Trace our work</small>
+          </h4>
+          <div className="row">
+            <div className="icon complete">
+              <FontAwesomeIcon icon={faCheck} />
+            </div>
+            <div className="text">Presale live on DXSales <span>Completed</span></div>
           </div>
-          <div className="items">
-            <img src="" alt=""/>
-            <h3>Inventive Construction</h3>
-            <p>With a combination of burning, automatic LP filling and rewarding of holders, Eclipse is set to rise!</p>
+          <div className="row">
+            <div className="icon complete">
+              <FontAwesomeIcon icon={faCheck} />
+            </div>
+            <div className="text">Presale sold out <span>Completed</span></div>
           </div>
-        </div>
-      </StyledBigArticle>
-      <StyledRoadMap>
-        <h4>
-          Roadmap
-          <small>Trace our work</small>
-        </h4>
-        <div className="row">
-          <div className="icon complete">
-            <FontAwesomeIcon icon={faCheck} />
+          <div className="row">
+            <div className="icon complete">
+              <FontAwesomeIcon icon={faCheck} />
+            </div>
+            <div className="text">Listing on PANCAKESWAP <span>Completed</span></div>
           </div>
-          <div className="text">Presale live on DXSales <span>Completed</span></div>
-        </div>
-        <div className="row">
-          <div className="icon complete">
-            <FontAwesomeIcon icon={faCheck} />
+          <div className="row">
+            <div className="icon complete">
+              <FontAwesomeIcon icon={faCheck} />
+            </div>
+            <div className="text">Marketing on Poocoin <span>Live now</span></div>
           </div>
-          <div className="text">Presale sold out <span>Completed</span></div>
-        </div>
-        <div className="row">
-          <div className="icon complete">
-            <FontAwesomeIcon icon={faCheck} />
+          <div className="row">
+            <div className="icon complete">
+              <FontAwesomeIcon icon={faCheck} />
+            </div>
+            <div className="text">Reach 1000 holders <span>Completed</span></div>
           </div>
-          <div className="text">Listing on PANCAKESWAP <span>Completed</span></div>
-        </div>
-        <div className="row">
-          <div className="icon complete">
-            <FontAwesomeIcon icon={faCheck} />
+          <div className="row">
+            <div className="icon complete">
+              <FontAwesomeIcon icon={faCheck} />
+            </div>
+            <div className="text">Audit Eclipse Smart Contract <span>Completed</span></div>
           </div>
-          <div className="text">Marketing on Poocoin <span>Live now</span></div>
-        </div>
-        <div className="row">
-          <div className="icon complete">
-            <FontAwesomeIcon icon={faCheck} />
+          <div className="row">
+            <div className="icon complete">
+              <FontAwesomeIcon icon={faCheck} />
+            </div>
+            <div className="text">Reach 3000 holders <span>Completed</span></div>
           </div>
-          <div className="text">Reach 1000 holders <span>Completed</span></div>
-        </div>
-        <div className="row">
-          <div className="icon complete">
-            <FontAwesomeIcon icon={faCheck} />
+          <div className="row">
+            <div className="icon pending">
+              <FontAwesomeIcon icon={faHourglass} />
+            </div>
+            <div className="text">Launch holder contest ($1000) <span className="orange">Contest live</span></div>
           </div>
-          <div className="text">Audit Eclipse Smart Contract <span>Completed</span></div>
-        </div>
-        <div className="row">
-          <div className="icon complete">
-            <FontAwesomeIcon icon={faCheck} />
+          <div className="row">
+            <div className="icon pending">
+              <FontAwesomeIcon icon={faHourglass} />
+            </div>
+            <div className="text">Litepaper released <span className="orange">In progress</span></div>
           </div>
-          <div className="text">Reach 3000 holders <span>Completed</span></div>
-        </div>
-        <div className="row">
-          <div className="icon pending">
-            <FontAwesomeIcon icon={faHourglass} />
+          <div className="row">
+            <div className="icon notComplete" />
+            <div className="text">Whitebit listing</div>
           </div>
-          <div className="text">Launch holder contest ($1000) <span className="orange">Contest live</span></div>
-        </div>
-        <div className="row">
-          <div className="icon pending">
-            <FontAwesomeIcon icon={faHourglass} />
+          <div className="row">
+            <div className="icon notComplete" />
+            <div className="text">Reach 5000 holders</div>
           </div>
-          <div className="text">Litepaper released <span className="orange">In progress</span></div>
-        </div>
-        <div className="row">
-          <div className="icon notComplete" />
-          <div className="text">Whitebit listing</div>
-        </div>
-        <div className="row">
-          <div className="icon notComplete" />
-          <div className="text">Reach 5000 holders</div>
-        </div>
-        <div className="row">
-          <div className="icon notComplete" />
-          <div className="text">Launch second holder contest ($2000)</div>
-        </div>
-        <div className="row">
-          <div className="icon notComplete" />
-          <div className="text">Whitepaper released</div>
-        </div>
-        <div className="row">
-          <div className="icon notComplete" />
-          <div className="text">CoinmarketCap & Coingecko Listing</div>
-        </div>
-        <div className="row">
-          <div className="icon notComplete" />
-          <div className="text">Listing on Exchange</div>
-        </div>
-      </StyledRoadMap>
+          <div className="row">
+            <div className="icon notComplete" />
+            <div className="text">Launch second holder contest ($2000)</div>
+          </div>
+          <div className="row">
+            <div className="icon notComplete" />
+            <div className="text">Whitepaper released</div>
+          </div>
+          <div className="row">
+            <div className="icon notComplete" />
+            <div className="text">CoinmarketCap & Coingecko Listing</div>
+          </div>
+          <div className="row">
+            <div className="icon notComplete" />
+            <div className="text">Listing on Exchange</div>
+          </div>
+        </StyledRoadMap>
+      </StyledGrid>
+      <StyledFooter>ECLIPSE</StyledFooter>
     </StyledContentContainer>
   )
 }
