@@ -214,7 +214,7 @@ const StyledRoadMap = styled(StyledArticle)`
 `
 
 const StyledFooter = styled.footer`
-  background-image: linear-gradient(142deg, #1f0b0b, #0000009e);
+  background-color: #1a0101;
   height: 100px; 
   margin-top: -60px;
   display: flex;
